@@ -1,22 +1,25 @@
 ---
+# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "Laravel"
-  text: "The PHP Framework for Web Artisans"
-  tagline: Documentation for Laravel 11.x
+  name: "文档中心"
+  text: "中文文档中心"
+  tagline: My great project tagline
   actions:
     - theme: brand
-      text: Get Started
-      link: /installation
+      text: Markdown Examples
+      link: /markdown-examples
     - theme: alt
-      text: Release Notes
-      link: /releases
+      text: API Examples
+      link: /api-examples
+
 features:
-  - title: Elegant & Expressive
-    details: Laravel's clean, elegant syntax makes writing PHP code a pleasure.
-  - title: Full-Stack Framework
-    details: Routing, frontend, authentication, database — everything you need.
-  - title: Powerful Ecosystem
-    details: Cashier, Dusk, Horizon, Octane, Sail, Sanctum, and more.
+  - title: Feature A
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Feature B
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Feature C
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
+
