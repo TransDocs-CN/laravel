@@ -1,0 +1,216 @@
+/*
+ * Laravel 品牌配色覆盖
+ * 主色调：#ff2d20 (Laravel 红)
+ * 参考：https://laravel.com
+ */
+
+/* ==================== 浅色模式 ==================== */
+:root {
+  /* 品牌主色 */
+  --vp-c-brand-1: #ff2d20;
+  --vp-c-brand-2: #e02a1f;
+  --vp-c-brand-3: #c4251b;
+  --vp-c-brand-soft: rgba(255, 45, 32, 0.14);
+
+  /* 强调色（与品牌色一致） */
+  --vp-c-accent: #ff2d20;
+  --vp-c-accent-bg: #ff2d20;
+  --vp-c-accent-hover: #e02a1f;
+  --vp-c-accent-active: #c4251b;
+
+  /* 按钮品牌色 */
+  --vp-button-brand-bg: #ff2d20;
+  --vp-button-brand-hover-bg: #e02a1f;
+  --vp-button-brand-active-bg: #c4251b;
+
+  /* 文字高亮 */
+  --vp-c-text-1: #1a1a1a;
+  --vp-c-text-2: #3c3c3c;
+  --vp-c-text-3: #6b7280;
+
+  /* 背景色微调 */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f8f9fa;
+  --vp-c-bg-soft: #f4f4f5;
+  --vp-c-bg-mute: #e5e7eb;
+
+  /* 首页 Hero 区域 */
+  --vp-home-hero-name-color: #ff2d20;
+
+  /* 链接颜色 */
+  --vp-c-link: #ff2d20;
+  --vp-c-link-hover: #e02a1f;
+
+  /* 边框与分割线 */
+  --vp-c-divider: #e5e7eb;
+  --vp-c-border: #d1d5db;
+
+  /* Logo 尺寸 */
+  --vp-nav-logo-height: 28px;
+}
+
+/* ==================== 深色模式 ==================== */
+.dark {
+  /* 品牌主色（深色模式下稍亮一点） */
+  --vp-c-brand-1: #ff4d42;
+  --vp-c-brand-2: #ff2d20;
+  --vp-c-brand-3: #e02a1f;
+  --vp-c-brand-soft: rgba(255, 45, 32, 0.2);
+
+  /* 强调色 */
+  --vp-c-accent: #ff4d42;
+  --vp-c-accent-bg: #ff2d20;
+  --vp-c-accent-hover: #ff4d42;
+  --vp-c-accent-active: #ff6b61;
+
+  /* 按钮品牌色 */
+  --vp-button-brand-bg: #ff2d20;
+  --vp-button-brand-hover-bg: #ff4d42;
+  --vp-button-brand-active-bg: #ff6b61;
+
+  /* 文字 */
+  --vp-c-text-1: #f3f4f6;
+  --vp-c-text-2: #d1d5db;
+  --vp-c-text-3: #9ca3af;
+
+  /* 背景 */
+  --vp-c-bg: #0f172a;
+  --vp-c-bg-alt: #1e293b;
+  --vp-c-bg-soft: #1e293b;
+  --vp-c-bg-mute: #334155;
+
+  /* 首页 Hero */
+  --vp-home-hero-name-color: #ff4d42;
+
+  /* 链接 */
+  --vp-c-link: #ff4d42;
+  --vp-c-link-hover: #ff6b61;
+
+  /* 边框 */
+  --vp-c-divider: #374151;
+  --vp-c-border: #4b5563;
+}
+
+/* ==================== Logo 美化 ==================== */
+/* Logo 图片样式 */
+.VPImage.logo {
+  height: var(--vp-nav-logo-height) !important;
+  width: auto !important;
+  margin-right: 8px;
+}
+
+/* Logo 旁边的网站标题 */
+.VPNavBarTitle .title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+}
+
+/* Logo 区域整体对齐 */
+.VPNavBarTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==================== 导航栏整体美化 ==================== */
+.VPNav {
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.VPNavBar .container .content {
+  background-color: transparent;
+}
+
+/* 导航链接 */
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup .button {
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuGroup .button:hover {
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+
+/* ==================== 导航栏下拉菜单 ==================== */
+.VPFlyout .menu {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 8px 0;
+  min-width: 220px;
+}
+
+.VPFlyout .menu .VPMenuLink {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  border-radius: 0;
+}
+
+.VPFlyout .menu .VPMenuLink:hover {
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+
+/* 外部链接指示图标 - 在链接文字后添加 ↗ 符号 */
+.VPFlyout .menu .VPMenuLink[href^="http"]::after {
+  content: " ";
+  font-size: 0.75rem;
+  opacity: 0.5;
+  margin-left: 4px;
+}
+
+/* ==================== 激活的导航项 ==================== */
+.VPNavBarMenuLink.active,
+.VPNavBarMenuGroup.active .button,
+.VPSidebarItem .is-active {
+  color: var(--vp-c-brand-1);
+}
+
+/* ==================== 搜索框 ==================== */
+.VPNavBarSearch .DocSearch-Button {
+  border-color: var(--vp-c-border);
+  border-radius: 8px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.VPNavBarSearch .DocSearch-Button:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+  box-shadow: 0 0 0 3px var(--vp-c-brand-soft);
+}
+
+/* ==================== 侧边栏美化 ==================== */
+.VPSidebarItem.is-link:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.VPSidebarItem .is-active > .item > .text {
+  font-weight: 600;
+}
+
+/* ==================== 自定义滚动条 ==================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-text-3);
+}

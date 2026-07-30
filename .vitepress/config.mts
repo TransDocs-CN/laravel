@@ -54,23 +54,43 @@ const sidebarCategories: [string, string[]][] = [
   ["MongoDB", ["mongodb"]],
 ]
 
+// 外部链接通用配置
+const externalLinkProps = { target: '_blank', rel: 'noopener noreferrer' }
+
 export default defineConfig({
   srcDir: 'docs',
-  title: 'Laravel文档',
+  base: '/laravel/',
+  title: 'Laravel 文档',
   description: 'Laravel 中文文档中心',
   lang: 'zh-CN',
   ignoreDeadLinks: [/^\//, /^https?:\/\//, /^mailto:/],
-  markdown: {
-    container: {
-      tipLabel: '提示',
-      warningLabel: '警告',
-      dangerLabel: '危险',
-      infoLabel: '信息',
-      detailsLabel: '详情',
-    },
-  },
   themeConfig: {
-    nav: [],
+    logo: {
+      src: '/logo.svg',
+      alt: 'Laravel',
+    },
+    nav: [
+      {
+        text: '产品',
+        items: [
+          { text: 'Laravel Cloud', link: 'https://cloud.laravel.com', ...externalLinkProps },
+          { text: 'Laravel Forge', link: 'https://forge.laravel.com', ...externalLinkProps },
+          { text: 'Laravel Vapor', link: 'https://vapor.laravel.com', ...externalLinkProps },
+          { text: 'Laravel Herd', link: 'https://herd.laravel.com', ...externalLinkProps },
+          { text: 'Laravel Nova', link: 'https://nova.laravel.com', ...externalLinkProps },
+          { text: 'Laravel Nightwatch', link: 'https://nightwatch.laravel.com', ...externalLinkProps },
+        ],
+      },
+      {
+        text: '资源',
+        items: [
+          { text: 'Laravel 官网', link: 'https://laravel.com', ...externalLinkProps },
+          { text: 'Laracasts', link: 'https://laracasts.com', ...externalLinkProps },
+          { text: 'Laravel News', link: 'https://laravel-news.com', ...externalLinkProps },
+          { text: 'GitHub', link: 'https://github.com/laravel/laravel', ...externalLinkProps },
+        ],
+      },
+    ],
     sidebar: sidebarCategories.map(([category, slugs]) => ({
       text: category,
       items: slugs.map((slug) => ({
@@ -79,7 +99,7 @@ export default defineConfig({
       })),
     })),
     socialLinks: [
-      { icon: 'laravel', link: 'https://laravel.com' },
+      { icon: 'github', link: 'https://github.com/laravel/laravel' },
     ],
     docFooter: {
       prev: '上一页',
@@ -87,6 +107,10 @@ export default defineConfig({
     },
     outline: {
       label: '页面导航',
+    },
+    footer: {
+      message: '基于 MIT 协议发布',
+      copyright: 'Copyright © Laravel 中文文档贡献者',
     },
   },
 })
