@@ -291,13 +291,12 @@ export default defineConfig({
     ['link', { rel: 'icon', href: 'https://laravel.com/img/favicon/favicon-32x32.png' }],
   ],
 
-  cleanUrls: true,
+  ignoreDeadLinks: true,
 
   locales: {
     root: {
       label: 'English',
       lang: 'en-US',
-      dir: 'en',
       title: 'Laravel Documentation',
       description: 'Laravel PHP Framework Documentation',
       themeConfig: {
