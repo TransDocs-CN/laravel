@@ -114,12 +114,13 @@
 }
 
 /* ==================== 导航栏整体美化 ==================== */
-.VPNav {
-  border-bottom: 1px solid var(--vp-c-divider);
-}
-
-.VPNavBar .container .content {
-  background-color: transparent;
+.VPNav,
+.VPNavBar,
+.VPNavBar .wrapper,
+.VPNavBar .container,
+.VPNavBar .content,
+.VPNavBar.scrolled {
+  background-color: var(--vp-c-bg) !important;
 }
 
 /* 导航链接 */
@@ -140,11 +141,16 @@
 
 /* ==================== 导航栏下拉菜单 ==================== */
 .VPFlyout .menu {
+  background-color: var(--vp-c-bg) !important;
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   padding: 8px 0;
   min-width: 220px;
+}
+
+.VPFlyout .menu .VPMenu {
+  background-color: var(--vp-c-bg) !important;
 }
 
 .VPFlyout .menu .VPMenuLink {

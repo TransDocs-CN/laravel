@@ -59,7 +59,7 @@ const externalLinkProps = { target: '_blank', rel: 'noopener noreferrer' }
 
 export default defineConfig({
   srcDir: 'docs',
-  base: '/laravel/',
+  //base: '/laravel/',
   title: 'Laravel 文档',
   description: 'Laravel 中文文档中心',
   lang: 'zh-CN',
