@@ -64,6 +64,11 @@ export default defineConfig({
   description: 'Laravel 中文文档中心',
   lang: 'zh-CN',
   ignoreDeadLinks: [/^\//, /^https?:\/\//, /^mailto:/],
+  vite: {
+    ssr: {
+      noExternal: ['@tangzhangming/docs-topbar']
+    }
+  },
   themeConfig: {
     logo: {
       src: '/logo.svg',
