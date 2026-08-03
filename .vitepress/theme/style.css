@@ -6,6 +6,16 @@
 
 /* ==================== 浅色模式 ==================== */
 :root {
+  /* 顶栏高度：让 VitePress 自带导航栏(.VPNav)让出空间 */
+  --vp-layout-top-height: 34px;
+
+  /* 共享顶栏配色 */
+  --vp-site-topbar-bg: #21262e;
+  --vp-site-topbar-border: rgba(255, 255, 255, 0.08);
+  --vp-site-topbar-fg: rgba(235, 235, 240, 0.9);
+  --vp-site-topbar-fg-muted: rgba(235, 235, 240, 0.55);
+  --vp-site-topbar-hover-bg: rgba(255, 255, 255, 0.12);
+
   /* 品牌主色 */
   --vp-c-brand-1: #ff2d20;
   --vp-c-brand-2: #e02a1f;
@@ -51,6 +61,10 @@
 
 /* ==================== 深色模式 ==================== */
 .dark {
+  /* 顶栏配色（深色模式） */
+  --vp-site-topbar-bg: #16181d;
+  --vp-site-topbar-border: rgba(255, 255, 255, 0.08);
+
   /* 品牌主色（深色模式下稍亮一点） */
   --vp-c-brand-1: #ff4d42;
   --vp-c-brand-2: #ff2d20;
