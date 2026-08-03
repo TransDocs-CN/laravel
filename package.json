@@ -15,8 +15,5 @@
   "type": "commonjs",
   "devDependencies": {
     "vitepress": "^2.0.0-alpha.18"
-  },
-  "dependencies": {
-    "@tangzhangming/docs-topbar": "github:TransDocs-CN/shared-topbar#v1.0.2"
   }
 }

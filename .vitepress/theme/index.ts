@@ -1,4 +1,8 @@
-import { createDocsTopbarTheme } from '@tangzhangming/docs-topbar'
+import DefaultTheme from 'vitepress/theme'
+import Layout from './Layout.vue'
 import './style.css'
 
-export default createDocsTopbarTheme({ currentKey: 'laravel' })
+export default {
+  extends: DefaultTheme,
+  Layout
+}
